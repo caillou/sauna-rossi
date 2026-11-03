@@ -32,7 +32,8 @@ const ogImage = await getImage({
   width: 1200,
   height: 630,
   fit: "cover",
-  position: "center",
+  // Top keeps the whole "A. Rossi" sign in frame; center cuts it.
+  position: "top",
   format: "jpg",
 });
 const ogImageUrl = new URL(ogImage.src, Astro.site).href;
