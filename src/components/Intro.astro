@@ -1,0 +1,79 @@
+---
+import { intro } from "../content/site";
+import Rich from "./Rich.astro";
+---
+
+<h1>
+  {intro.title}
+  <br />
+  <span>{intro.titleAccent}</span>
+</h1>
+
+<section>
+  <p class="text">{intro.text}</p>
+  <div class="schedule">
+    <p class="when">
+      {intro.day}
+      <br />
+      <span>{intro.time}</span>
+    </p>
+    <p class="note">
+      <Rich segments={intro.note} />
+    </p>
+  </div>
+</section>
+
+<style>
+  h1 {
+    margin: 26px 0 0;
+    padding: 0 var(--gutter);
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(46px, 10.5vw, 124px);
+    line-height: 0.86;
+    letter-spacing: -0.022em;
+    text-wrap: pretty;
+  }
+
+  span {
+    color: var(--red);
+  }
+
+  section {
+    padding: 34px var(--gutter) 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: clamp(28px, 4vw, 48px);
+    align-items: start;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .text {
+    font-size: 22px;
+    line-height: 1.42;
+    text-wrap: pretty;
+  }
+
+  .schedule {
+    border-top: 2px solid var(--ink);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .when {
+    font-family: var(--display);
+    font-size: clamp(38px, 6vw, 50px);
+    line-height: 0.95;
+  }
+
+  .note {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+</style>

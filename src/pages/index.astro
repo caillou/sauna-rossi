@@ -1,0 +1,23 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import InfoGrid from "../components/InfoGrid.astro";
+import Intro from "../components/Intro.astro";
+import NewLocation from "../components/NewLocation.astro";
+import Volunteer from "../components/Volunteer.astro";
+import { meta } from "../content/site";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title={meta.title} description={meta.description}>
+  <Header />
+  <main>
+    <Intro />
+    <Hero />
+    <InfoGrid />
+    <Volunteer />
+    <NewLocation />
+  </main>
+  <Footer />
+</Base>

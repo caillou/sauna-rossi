@@ -1,0 +1,20 @@
+---
+import { footer } from "../content/site";
+import Rich from "./Rich.astro";
+---
+
+<footer>
+  <Rich segments={footer} />
+</footer>
+
+<style>
+  footer {
+    padding: clamp(44px, 7vw, 64px) var(--gutter) 64px;
+    font-family: var(--narrow);
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.72;
+    text-align: center;
+    text-wrap: pretty;
+  }
+</style>
