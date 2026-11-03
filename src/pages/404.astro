@@ -1,0 +1,35 @@
+---
+import { notFound } from "../content/site";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title={notFound.title} noindex>
+  <main>
+    <h1>{notFound.title}</h1>
+    <p>
+      <a href="/">{notFound.link}</a>
+    </p>
+  </main>
+</Base>
+
+<style>
+  main {
+    padding: clamp(32px, 6vw, 56px) var(--gutter) 64px;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(46px, 10.5vw, 124px);
+    line-height: 0.86;
+    letter-spacing: -0.022em;
+    text-wrap: pretty;
+  }
+
+  p {
+    margin: 34px 0 0;
+    font-size: 22px;
+    line-height: 1.42;
+  }
+</style>
