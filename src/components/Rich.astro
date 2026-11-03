@@ -1,0 +1,23 @@
+---
+// Renders copy segments: plain text, line breaks and inline links. External
+// links open in a new tab; mailto links do not.
+import type { Segment } from "../content/site";
+
+interface Props {
+  segments: Segment[];
+}
+
+const { segments } = Astro.props;
+---
+
+{segments.map((segment) => {
+  if (typeof segment === "string") return segment;
+  if ("br" in segment) return <br />;
+  return segment.href.startsWith("http") ? (
+    <a href={segment.href} target="_blank" rel="noopener">
+      {segment.text}
+    </a>
+  ) : (
+    <a href={segment.href}>{segment.text}</a>
+  );
+})}
