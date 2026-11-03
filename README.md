@@ -53,21 +53,29 @@ its README:
 
 ## Launch runbook
 
-1. Run `pnpm run deploy`.
-2. Enable Pages:
+1. Make the repo public, because Pages needs that on a free plan:
+
+   ```bash
+   gh repo edit caillou/sauna-rossi --visibility public --accept-visibility-change-consequences
+   ```
+
+2. Run `pnpm run deploy`.
+3. Enable Pages:
 
    ```bash
    gh api -X POST repos/caillou/sauna-rossi/pages -f 'source[branch]=gh-pages' -f 'source[path]=/'
    ```
 
-3. In OVH, for sauna-rossi.ch:
-   - Remove the A record 213.186.33.5 on the apex and on www.
+4. In OVH, for sauna-rossi.ch:
+   - Remove the web redirect, which owns the A record 213.186.33.5 on the apex
+     and on www, and the TXT record `1|www.sauna-rossi.ch`.
    - Add the four GitHub A records on the apex: 185.199.108.153,
      185.199.109.153, 185.199.110.153, 185.199.111.153.
    - Add CNAME www to caillou.github.io.
-   - Keep the MX and TXT records.
-4. Wait for the certificate, then enforce HTTPS in the Pages settings.
-5. Verify:
+   - Keep the MX records, the SPF record and the
+     `_github-pages-challenge-caillou` TXT record.
+5. Wait for the certificate, then enforce HTTPS in the Pages settings.
+6. Verify:
 
    ```bash
    gh api repos/caillou/sauna-rossi/pages
