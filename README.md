@@ -31,8 +31,8 @@ plain `pnpm deploy` is pnpm's own workspace command.
 ## Editing copy
 
 All text lives in `src/content/site.ts`. Soft hyphens and non-breaking spaces
-are written there as the JS escapes `­` and ` `. Text with line breaks or inline
-links is a list of segments, rendered by `src/components/Rich.astro`.
+are written there as the JS escapes `\u00AD` and `\u00A0`. Text with line breaks
+or inline links is a list of segments, rendered by `src/components/Rich.astro`.
 
 ## Icons
 

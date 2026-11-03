@@ -3,8 +3,8 @@
 //
 // Two invisible characters are written as JS escapes, because Astro escapes
 // `{expr}` output and a literal "&shy;" would render as text:
-//   ­ soft hyphen, the only place a long word may break
-//     non-breaking space, keeps two words on one line
+//   \u00AD soft hyphen, the only place a long word may break
+//   \u00A0 non-breaking space, keeps two words on one line
 //
 // Text with line breaks or inline links is a list of segments, see Rich.astro.
 
@@ -27,7 +27,7 @@ export const header = {
 };
 
 export const intro = {
-  title: "Die Sauna­tankstelle",
+  title: "Die Sauna\u00ADtankstelle",
   titleAccent: "A. Rossi",
   text: "Eine Sauna als Hommage an den Winterthurer Zapfsäulen-Pionier. Getankt wird an seiner legendären Tankstelle nicht mehr. Jetzt ist sie holzbefeuert und offen für alle. Gebaut hat sie das Basler Kunstkollektiv Hotel Regina, im Auftrag der SKKG. Am Laufen halten wir sie: ein paar Freiwillige.",
   day: "Donnerstag",
@@ -64,7 +64,7 @@ export const info: { label: string; paragraphs: Segment[][] }[] = [
       [
         {
           // Non-breaking spaces keep street + number and zip + town together.
-          text: "Zum Park 5, 8404 Winterthur",
+          text: "Zum\u00A0Park\u00A05, 8404\u00A0Winterthur",
           href: "https://www.google.com/maps/search/?api=1&query=Zum+Park+5%2C+8404+Winterthur",
         },
       ],
