@@ -10,6 +10,7 @@ import { hero } from "../content/site";
     alt={hero.alt}
     class="photo"
     formats={["avif", "webp"]}
+    quality={65}
     widths={[400, 640, 800, 1080, 1440, 1800]}
     sizes="(min-width: 1080px) 1080px, 100vw"
     loading="eager"
@@ -21,7 +22,7 @@ import { hero } from "../content/site";
   figure {
     margin: 44px 0 0;
     /* Loading state. The sky in the photo is black, so the two blend. */
-    background: #17171a;
+    background: var(--ink);
   }
 
   /* Uncropped: the height follows from the img's width and height attributes. */
