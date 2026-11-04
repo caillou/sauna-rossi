@@ -20,12 +20,6 @@ export const meta = {
     "Eine holzbefeuerte Sauna auf dem Campo Parkplatz in Winterthur. Jeden Donnerstag 18 bis 21 Uhr, gratis.",
 };
 
-export const header = {
-  presenter: ["Kollektiv", br, "Hotel Regina", br, "präsentiert:"] as Segment[],
-  project:
-    "Ein Projekt der Stiftung für Kunst, Kultur und Geschichte und von Terresta",
-};
-
 export const intro = {
   title: "Die Sauna\u00ADtankstelle",
   titleAccent: "A. Rossi",
