@@ -85,7 +85,7 @@ export const volunteer = {
 };
 
 export const newLocation = {
-  label: "Ab Mai 2027",
+  label: "Ab März 2027",
   title: "Die Sauna braucht einen neuen Platz.",
   paragraphs: [
     [
