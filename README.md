@@ -50,6 +50,9 @@ its README:
 - Volunteer photo: self-hosted, rights cleared, no credit line.
 - Favicon: paper "R" on red, added on top of the handoff.
 - 404 page: added on top of the handoff, German, not indexed.
+- `CHANGES-2026-11-04.md`, the one file added to the handoff folder, overrides
+  the handoff, including the fonts: Archivo Narrow 600 went with the header. The
+  committed reference HTML predates it; the updated one was not supplied.
 
 ## Launch runbook
 
