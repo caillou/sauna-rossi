@@ -95,18 +95,26 @@ export const newLocation = {
   ] as Segment[][],
 };
 
-export const footer: Segment[] = [
-  "Gebaut vom ",
-  { text: "Kollektiv Hotel Regina", href: "https://hotelregina.org" },
-  " · Ein Projekt der ",
-  {
-    text: "Stiftung für Kunst, Kultur und Geschichte",
-    href: "https://www.skkg.ch",
-  },
-  " · Auf dem ",
-  { text: "CAMPO Areal", href: "https://www.campo-winterthur.ch" },
-  " · Betrieben von Freiwilligen · ",
-  emailLink,
+// Six items. Footer.astro groups them into lines.
+export const footer: Segment[][] = [
+  [
+    "Gebaut vom ",
+    { text: "Kollektiv Hotel Regina", href: "https://hotelregina.org" },
+  ],
+  [
+    "Ein Projekt der ",
+    {
+      text: "Stiftung für Kunst, Kultur und Geschichte",
+      href: "https://www.skkg.ch",
+    },
+  ],
+  [
+    "Auf dem ",
+    { text: "CAMPO Areal", href: "https://www.campo-winterthur.ch" },
+  ],
+  ["Betrieben von Freiwilligen"],
+  ["Nachtfoto: Nelly Rodriguez"],
+  [emailLink],
 ];
 
 export const notFound = {
