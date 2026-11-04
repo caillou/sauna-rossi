@@ -1,7 +1,7 @@
 # Die Saunatankstelle A. Rossi
 
-One-page website for the free, wood-fired community sauna on the CAMPO parking
-lot in Winterthur. Served at sauna-rossi.ch.
+One-page website for the free, wood-fired community sauna on the CAMPO Areal
+parking lot in Winterthur. Served at sauna-rossi.ch.
 
 ## Stack
 

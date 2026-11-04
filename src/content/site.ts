@@ -17,7 +17,7 @@ const emailLink: Segment = { text: email, href: `mailto:${email}` };
 export const meta = {
   title: "Die Saunatankstelle A. Rossi",
   description:
-    "Eine holzbefeuerte Sauna auf dem Campo Parkplatz in Winterthur. Jeden Donnerstag 18 bis 21 Uhr, gratis.",
+    "Eine holzbefeuerte Sauna auf dem CAMPO Areal in Winterthur. Jeden Donnerstag 18 bis 21 Uhr, gratis.",
 };
 
 export const intro = {
@@ -54,7 +54,9 @@ export const info: { label: string; paragraphs: Segment[][] }[] = [
   {
     label: "Wo",
     paragraphs: [
-      ["Auf dem Campo Parkplatz. Das Auto lässt du besser stehen."],
+      [
+        "Auf dem CAMPO Areal, auf dem Parkplatz. Das Auto lässt du besser stehen.",
+      ],
       [
         {
           // Non-breaking spaces keep street + number and zip + town together.
@@ -79,7 +81,7 @@ export const volunteer = {
   text: "Wir sind ein paar Freiwillige. Es braucht immer Leute, die einheizen und das Feuer hüten, die auf- und zuschliessen, und die nachher putzen. Nichts davon ist kompliziert.",
   howLabel: "So gehts",
   how: "Komm an einem Donnerstag vorbei und frag.",
-  alt: "Die Saunatankstelle auf dem Campo Parkplatz",
+  alt: "Die Saunatankstelle auf dem CAMPO Areal",
 };
 
 export const newLocation = {
@@ -87,7 +89,7 @@ export const newLocation = {
   title: "Die Sauna braucht einen neuen Platz.",
   paragraphs: [
     [
-      "Auf dem Campo darf sie bis April 2027 stehen. Wir suchen einen Ort, an dem sie weiterleben kann, am liebsten in Hegi oder Oberi.",
+      "Auf dem CAMPO Areal darf sie bis März 2027 stehen. Wir suchen einen Ort, an dem sie weiterleben kann, am liebsten in Hegi oder Oberi.",
     ],
     ["Du kennst einen? ", emailLink],
   ] as Segment[][],
@@ -101,10 +103,8 @@ export const footer: Segment[] = [
     text: "Stiftung für Kunst, Kultur und Geschichte",
     href: "https://www.skkg.ch",
   },
-  " und von ",
-  { text: "Terresta", href: "https://www.terresta.ch" },
   " · Auf dem ",
-  { text: "CAMPO", href: "https://www.campo-winterthur.ch" },
+  { text: "CAMPO Areal", href: "https://www.campo-winterthur.ch" },
   " · Betrieben von Freiwilligen · ",
   emailLink,
 ];
