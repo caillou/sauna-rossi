@@ -113,7 +113,7 @@ export const footer: Segment[][] = [
     { text: "CAMPO Areal", href: "https://www.campo-winterthur.ch" },
   ],
   ["Betrieben von Freiwilligen"],
-  ["Nachtfoto: Nelly Rodriguez"],
+  ["Fotos: Nelly Rodriguez"],
   [emailLink],
 ];
 

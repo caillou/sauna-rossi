@@ -51,7 +51,8 @@ from it only in the fonts, which are self-hosted, and in these decisions:
   change list recommends. The reference's two-line variant is not used.
 - Open Graph image: the volunteer photo at 1200x630, not the hero.
 - Volunteer photo: a sharper self-hosted 2400x1600 version, not the reference's
-  hotlink, rights cleared, no credit line. Its alt says "CAMPO Areal".
+  hotlink, rights cleared, credited in the footer's "Fotos" line. Its alt says
+  "CAMPO Areal".
 - New location label: "Ab März 2027", owner decision, not the "Ab Mai 2027" in
   the change lists.
 
