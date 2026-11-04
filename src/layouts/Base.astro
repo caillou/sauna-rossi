@@ -7,12 +7,9 @@ import "@fontsource/archivo/700.css";
 import "@fontsource/archivo/400-italic.css";
 import "@fontsource/archivo-narrow/400.css";
 import "@fontsource/archivo-narrow/500.css";
-import "@fontsource/archivo-narrow/600.css";
 import "@fontsource/archivo-narrow/700.css";
 import { getImage } from "astro:assets";
 import abrilLatin400 from "@fontsource/abril-fatface/files/abril-fatface-latin-400-normal.woff2?url";
-import narrowLatin400 from "@fontsource/archivo-narrow/files/archivo-narrow-latin-400-normal.woff2?url";
-import narrowLatin600 from "@fontsource/archivo-narrow/files/archivo-narrow-latin-600-normal.woff2?url";
 import volunteerPhoto from "../assets/volunteer.jpg";
 
 interface Props {
@@ -71,27 +68,6 @@ const ogImageUrl = new URL(ogImage.src, Astro.site).href;
       type="font/woff2"
       crossorigin
     />
-    {
-      /* Only pages with the header use Archivo Narrow above the fold. */
-      !noindex && (
-        <>
-          <link
-            rel="preload"
-            href={narrowLatin400}
-            as="font"
-            type="font/woff2"
-            crossorigin
-          />
-          <link
-            rel="preload"
-            href={narrowLatin600}
-            as="font"
-            type="font/woff2"
-            crossorigin
-          />
-        </>
-      )
-    }
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
