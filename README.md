@@ -41,18 +41,22 @@ changing it, run `pnpm run icons` and commit the PNGs.
 
 ## Overrides to the design handoff
 
-`design_handoff_saunatankstelle/` is kept unchanged. These decisions override
-its README:
+`design_handoff_saunatankstelle/` is kept as supplied, apart from a name removed
+from `CHANGES-2026-11-04.md`. The two `CHANGES-2026-11-04*.md` files override
+its README, the later one first, including the fonts: Archivo Narrow 600 went
+with the header. The reference HTML includes both change lists. The site differs
+from it only in the fonts, which are self-hosted, and in these decisions:
 
-- Hero: `src/assets/buckets.jpeg` is a 2200x1650 sRGB conversion of the
-  original, without metadata, not the handoff's 1024px file.
+- Footer: three lines from 520px up, one item per line below, as the second
+  change list recommends. The reference's two-line variant is not used.
 - Open Graph image: the volunteer photo at 1200x630, not the hero.
-- Volunteer photo: self-hosted, rights cleared, no credit line.
-- Favicon: paper "R" on red, added on top of the handoff.
-- 404 page: added on top of the handoff, German, not indexed.
-- `CHANGES-2026-11-04.md`, the one file added to the handoff folder, overrides
-  the handoff, including the fonts: Archivo Narrow 600 went with the header. The
-  committed reference HTML predates it; the updated one was not supplied.
+- Volunteer photo: a sharper self-hosted 2400x1600 version, not the reference's
+  hotlink, rights cleared, no credit line. Its alt says "CAMPO Areal".
+
+Added on top of the handoff:
+
+- Favicon: paper "R" on red.
+- 404 page: German, not indexed.
 
 ## Launch runbook
 
