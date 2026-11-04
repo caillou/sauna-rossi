@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import photo from "../assets/buckets.jpeg";
+import photo from "../assets/nacht-nelly-rodriguez.jpg";
 import { hero } from "../content/site";
 ---
 
@@ -10,8 +10,8 @@ import { hero } from "../content/site";
     alt={hero.alt}
     class="photo"
     formats={["avif", "webp"]}
-    widths={[400, 640, 800, 1080, 1600, 2160]}
-    sizes="(min-width: 1080px) 1080px, max(100vw, 400px)"
+    widths={[400, 640, 800, 1080, 1440, 1800]}
+    sizes="(min-width: 1080px) 1080px, 100vw"
     loading="eager"
     fetchpriority="high"
   />
@@ -20,22 +20,14 @@ import { hero } from "../content/site";
 <style>
   figure {
     margin: 44px 0 0;
-    height: clamp(300px, 46vw, 620px);
-    overflow: hidden;
-    background: var(--placeholder);
+    /* Loading state. The sky in the photo is black, so the two blend. */
+    background: #17171a;
   }
 
-  /* The class lands on the img. Take the picture out of the box tree so the
-     img's height: 100% resolves against the figure. */
-  figure :global(picture) {
-    display: contents;
-  }
-
+  /* Uncropped: the height follows from the img's width and height attributes. */
   .photo {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
+    height: auto;
     display: block;
   }
 </style>

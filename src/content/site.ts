@@ -35,7 +35,7 @@ export const intro = {
 };
 
 export const hero = {
-  alt: "Rote Kübel und Schlauch vor der Sauna",
+  alt: "Die Saunatankstelle bei Nacht, Foto: Nelly Rodriguez",
 };
 
 export const info: { label: string; paragraphs: Segment[][] }[] = [
